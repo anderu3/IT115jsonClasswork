@@ -1,0 +1,15 @@
+{
+    "name": "Andrew Lee",
+    "age": 28,
+    "city": "Lynnwood, WA",
+    "interests": [
+        "Tennis",
+        "League of Legends",
+        "TFT",
+        "Valorant",
+        "Music",
+        "Golf",
+        "Aviation"
+    ],
+    "is_student": true
+}
