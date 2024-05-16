@@ -1,42 +1,43 @@
-#Importing json
+# importing json
 import json
 
-#Creating our barebones data library
+# initializing the data dictionary
 
 data = {
 
     'name': 'Andrew Lee',
-    'age': 28,
+    'age': 21,
     'city': 'Lynnwood, WA',
     'interests':['Tennis','League of Legends','TFT','Valorant','Music','Golf'],
     'is_student': True
 
 }
 
-
-#Creating a Json file and writing the object contents to the json file
+# create json file and write the  contents to the json file
 with open('data.json','w') as json_file:
 
         json.dump(data,json_file,indent=4)
 
 print("Data has been written to data.json")
 
-#Reading the contetns of the previously created json_file
+# reading contents of previously created data_dict json_file
+
 with open('data.json','r') as json_file:
         
-        #Create an object called loaded_data. Load the json file into the argument parameter.
+        # create object loaded_data to use into later argument
         loaded_data = json.load(json_file)
 
-#Prints "Succesfully able to read data.json" when it is able to sucessfully
-#Prints the loaded data from json_file thanks to the object loaded_data we created
+# prints "Succesfully able to read data.json" when successfully reading data.json
 print("Succesfully able to read data.json")
+
+# prints the loaded data from json_file from earlier initialization
 print(loaded_data)
 
-#
-loaded_data['age'] = 28 #<-Integers
+# update data_dict with new values from keys
+loaded_data['age'] = 28
 loaded_data['interests'].append('Aviation')
 
-#Rewrite the changes to our json_file
+# open data.json file and write the updated data to the file
 with open('data.json','w') as json_file:
 
         json.dump(loaded_data,json_file,indent=4)
